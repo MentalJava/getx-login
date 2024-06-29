@@ -70,21 +70,26 @@ class WelcomeLogin extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            Container(
-              height: 53,
-              width: 320,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.white),
-              ),
-              child: Center(
-                child: Text(
-                  "SIGN UP",
-                  style: GoogleFonts.gowunDodum(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 235, 51, 73),
+            GestureDetector(
+              onTap: () {
+                Get.toNamed("/signup");
+              },
+              child: Container(
+                height: 53,
+                width: 320,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(color: Colors.white),
+                ),
+                child: Center(
+                  child: Text(
+                    "SIGN UP",
+                    style: GoogleFonts.gowunDodum(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: const Color.fromARGB(255, 235, 51, 73),
+                    ),
                   ),
                 ),
               ),

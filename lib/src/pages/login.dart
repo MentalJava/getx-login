@@ -16,8 +16,8 @@ class Login extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              height: double.infinity,
-              width: double.infinity,
+              height: Get.height,
+              width: Get.width,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Color(0xffeb3349), Color(0xfff45c43)],
@@ -117,42 +117,48 @@ class Login extends StatelessWidget {
                       ),
                       Align(
                         alignment: Alignment.centerRight,
-                        child: Text(
-                          'Forgot Password?',
-                          style: GoogleFonts.gowunDodum(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: const Color(0xff281537),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 70,
-                      ),
-                      Container(
-                        height: 55,
-                        width: 400,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [Color(0xffeb3349), Color(0xfff45c43)],
-                            stops: [0, 1],
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                          ),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: Center(
+                        child: TextButton(
                           child: Text(
-                            'SIGN IN',
+                            'Forgot Password?',
                             style: GoogleFonts.gowunDodum(
-                                fontSize: 28,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xff281537),
+                            ),
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Container(
+                          height: 55,
+                          width: 400,
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                              colors: [Color(0xffeb3349), Color(0xfff45c43)],
+                              stops: [0, 1],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'SIGN IN',
+                              style: GoogleFonts.gowunDodum(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(
-                        height: 150,
+                        height: 100,
                       ),
                       Align(
                         alignment: Alignment.bottomRight,
@@ -168,10 +174,7 @@ class Login extends StatelessWidget {
                                 color: Colors.grey,
                               ),
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                Get.toNamed("/signup");
-                              },
+                            TextButton(
                               child: Text(
                                 "Sign up",
                                 style: GoogleFonts.gowunDodum(
@@ -180,6 +183,9 @@ class Login extends StatelessWidget {
                                   color: const Color(0xff281537),
                                 ),
                               ),
+                              onPressed: () {
+                                Get.toNamed('/signup');
+                              },
                             ),
                           ],
                         ),

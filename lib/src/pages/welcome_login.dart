@@ -10,8 +10,8 @@ class WelcomeLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height: Get.height,
+        width: Get.width,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xffeb3349), Color(0xfff45c43)],
@@ -44,9 +44,9 @@ class WelcomeLogin extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            GestureDetector(
-              onTap: () {
-                Get.toNamed("/login");
+            TextButton(
+              onPressed: () {
+                Get.toNamed('/login');
               },
               child: Container(
                 height: 53,
@@ -70,9 +70,9 @@ class WelcomeLogin extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            GestureDetector(
-              onTap: () {
-                Get.toNamed("/signup");
+            TextButton(
+              onPressed: () {
+                Get.toNamed('/signup');
               },
               child: Container(
                 height: 53,
@@ -109,9 +109,9 @@ class WelcomeLogin extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: const FaIcon(
-                    FontAwesomeIcons.instagram,
+                    FontAwesomeIcons.facebook,
                     color: Colors.white,
-                    size: 40,
+                    size: 35,
                   ),
                 ),
                 IconButton(

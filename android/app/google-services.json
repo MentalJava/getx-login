@@ -12,7 +12,20 @@
           "package_name": "com.example.getx_login_001"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "125607892840-6go361rj0ktgou2kdoabnbncgb12n88e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.getx_login_001",
+            "certificate_hash": "cbfb8f275406d065bd54a200b1e3746b92694b3f"
+          }
+        },
+        {
+          "client_id": "125607892840-83soutv2d4lqpaq1v2u32l6qvceus7cj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDJqYUMfMh85zVfwU17OGMXacZve0R2o6A"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125607892840-83soutv2d4lqpaq1v2u32l6qvceus7cj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "125607892840-08t5vdeo1l3qsp59pjkqvo7jebcnb6k7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.getxLogin"
+              }
+            }
+          ]
         }
       }
     }

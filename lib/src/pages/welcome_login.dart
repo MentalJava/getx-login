@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:getx_login/src/controllers/google_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeLogin extends StatelessWidget {
-  const WelcomeLogin({super.key});
+  WelcomeLogin({super.key});
+  final googleController = Get.put(GoogleController());
 
   @override
   Widget build(BuildContext context) {
@@ -114,14 +116,24 @@ class WelcomeLogin extends StatelessWidget {
                     size: 35,
                   ),
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const FaIcon(
-                    FontAwesomeIcons.google,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                ),
+                Obx(
+                  () {
+                    if (googleController.isLoading.value) {
+                      return const CircularProgressIndicator();
+                    } else {
+                      return IconButton(
+                        onPressed: () {
+                          googleController.loginwithGoogle();
+                        },
+                        icon: const FaIcon(
+                          FontAwesomeIcons.google,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      );
+                    }
+                  },
+                )
               ],
             ),
           ],

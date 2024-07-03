@@ -14,15 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "125607892840-6go361rj0ktgou2kdoabnbncgb12n88e.apps.googleusercontent.com",
+          "client_id": "125607892840-jolbf9810bba1qh4jg4gd8jcciqlv0du.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.getx_login_001",
-            "certificate_hash": "cbfb8f275406d065bd54a200b1e3746b92694b3f"
+            "certificate_hash": "c5e3f7a30b2289f4382b5112d73004731fa1781a"
           }
         },
         {
-          "client_id": "125607892840-83soutv2d4lqpaq1v2u32l6qvceus7cj.apps.googleusercontent.com",
+          "client_id": "125607892840-gau7ggvr90ilfrkslaccoromvnccknpa.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

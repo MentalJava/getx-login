@@ -123,7 +123,7 @@ class WelcomeLogin extends StatelessWidget {
                     } else {
                       return IconButton(
                         onPressed: () {
-                          googleController.loginwithGoogle();
+                          googleController.loginWithGoogle();
                         },
                         icon: const FaIcon(
                           FontAwesomeIcons.google,

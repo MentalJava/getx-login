@@ -2,6 +2,7 @@
 *.class
 *.log
 *.lock
+*.json
 *.pyc
 *.swp
 .DS_Store

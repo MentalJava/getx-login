@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:getx_login/src/controllers/google_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeLogin extends StatelessWidget {
-  const WelcomeLogin({super.key});
+  WelcomeLogin({super.key});
+  final googleController = Get.put(GoogleController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height: Get.height,
+        width: Get.width,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xffeb3349), Color(0xfff45c43)],
@@ -44,9 +46,9 @@ class WelcomeLogin extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            GestureDetector(
-              onTap: () {
-                Get.toNamed("/login");
+            TextButton(
+              onPressed: () {
+                Get.toNamed('/login');
               },
               child: Container(
                 height: 53,
@@ -70,9 +72,9 @@ class WelcomeLogin extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            GestureDetector(
-              onTap: () {
-                Get.toNamed("/signup");
+            TextButton(
+              onPressed: () {
+                Get.toNamed('/signup');
               },
               child: Container(
                 height: 53,
@@ -109,19 +111,29 @@ class WelcomeLogin extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: const FaIcon(
-                    FontAwesomeIcons.instagram,
+                    FontAwesomeIcons.facebook,
                     color: Colors.white,
-                    size: 40,
+                    size: 35,
                   ),
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const FaIcon(
-                    FontAwesomeIcons.google,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                ),
+                Obx(
+                  () {
+                    if (googleController.isLoading.value) {
+                      return const CircularProgressIndicator();
+                    } else {
+                      return IconButton(
+                        onPressed: () {
+                          googleController.loginWithGoogle();
+                        },
+                        icon: const FaIcon(
+                          FontAwesomeIcons.google,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      );
+                    }
+                  },
+                )
               ],
             ),
           ],

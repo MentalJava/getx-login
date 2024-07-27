@@ -2,7 +2,10 @@
 *.class
 *.log
 *.lock
+*.json
 *.pyc
+*.cc
+*.cmake
 *.swp
 .DS_Store
 .atom/
